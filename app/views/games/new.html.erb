@@ -1,0 +1,23 @@
+<h1>New Game</h1>
+<br>
+<h2><%= @letters%> </h2>
+
+<p>What is the longest word you can find ? </p>
+<form action="score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+   <%= hidden_field_tag :ramdomletters, @letters%>
+  <input type="text" name="answer">
+  <input type="submit" value="Play!">
+</form>
+
+<p><%= link_to "Ask a new question", new_path %></p>p>
+<!-- je dois recupérer la grille de lettres
+je dois récupérer word_play
+comparer
+
+vérifier si le mot est boien anglais avec l'api que je dois parser -->
+
+
+
+
+
