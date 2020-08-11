@@ -3,11 +3,12 @@
 <h2><%= @letters%> </h2>
 
 <p>What is the longest word you can find ? </p>
-<form action="score" method="post">
+
+<form action="score" method="post" class="form-inline">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
    <%= hidden_field_tag :ramdomletters, @letters%>
-  <input type="text" name="answer">
-  <input type="submit" value="Play!">
+  <input type="text" name="answer" class="form-control">
+  <input type="submit" value="Play!" class="btn btn-primary">
 </form>
 
 <p><%= link_to "Ask a new question", new_path %></p>p>
